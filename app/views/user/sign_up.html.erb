@@ -2,7 +2,7 @@
 <p>Find me in app/views/user/sign_up.html.erb</p>
 
 <section class="signupform cf">
-<form name="sign_up_page" action="sign_up" method="post" accept-charset="utf-8">
+<form name="sign_up_form" action="sign_up" method="post" accept-charset="utf-8">
     <ul>
         <li><label for="usermail">Username</label>
         <input type="string" name="username" placeholder="yourname"></li>
@@ -14,11 +14,10 @@
         <input type="submit" value="Sign Up" name="sign_up_button"></li>
         <li>
         <input type="submit" value="Cancel" name="cancel_button"></li>
-        <div>
-          <% if @errorinfo %>
-            <%= @errorinfo %>
-          <% end %>
-        </div>
+
+        <% if flash[:alert] %>
+        <p id = "notice"><%=flash[:alert]%></p>
+        <% end %>
     </ul>
 </form>
 </section>
