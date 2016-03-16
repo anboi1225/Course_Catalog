@@ -25,7 +25,7 @@ class UserController < ApplicationController
         return
       end
 
-      @user = User.create(username: params[:username], password: params[:password1])
+      #@user = User.create(username: params[:username], password: params[:password1])
       redirect_to root_path
       return
     end
