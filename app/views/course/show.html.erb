@@ -1,0 +1,7 @@
+<h1>Course#show</h1>
+<p>Find me in app/views/course/show.html.erb</p>
+
+<% Course.all.each do |course| %>
+  <%= course.code %><br>
+  <%= course.name %><br>
+<% end %>
