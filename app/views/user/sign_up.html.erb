@@ -1,0 +1,24 @@
+<h1>User#sign_up</h1>
+<p>Find me in app/views/user/sign_up.html.erb</p>
+
+<section class="signupform cf">
+<form name="sign_up_page" action="sign_up" method="post" accept-charset="utf-8">
+    <ul>
+        <li><label for="usermail">Username</label>
+        <input type="string" name="username" placeholder="yourname"></li>
+        <li><label for="password">Password</label>
+        <input type="password" name="password1" placeholder="password"></li>
+        <li><label for="password">Password Confirmation</label>
+        <input type="password" name="password2" placeholder="confirm password"></li>
+        <li>
+        <input type="submit" value="Sign Up" name="sign_up_button"></li>
+        <li>
+        <input type="submit" value="Cancel" name="cancel_button"></li>
+        <div>
+          <% if @errorinfo %>
+            <%= @errorinfo %>
+          <% end %>
+        </div>
+    </ul>
+</form>
+</section>
