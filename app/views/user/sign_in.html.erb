@@ -4,17 +4,19 @@
 
 <section class="signinform cf">
 
+<% if flash[:signed_in]%>
+  <form name="sign_in_form" action="../user/sign_out" method="get" accept-charset="utf-8">
   <div id="topnavigationbar" class="row">
     <div>
       <%= link_to "Home", user_sign_up_path %>
       <%= link_to "Subjects", user_sign_up_path %>
       <%= link_to "Courses", course_show_path %>
       <%= link_to "Instructors", user_sign_up_path %>
-      <% if flash[:signed_in]%>
-      <%= link_to "Logout", user_sign_up_path %>
-      <% end %>
+      <input type="submit" value="Sign Out" name="sign_out_button">
     </div>
   </div>
+  </form>
+<% end %>
 
 <% if !flash[:signed_in]%>
 <form name="sign_in_form" action="user/sign_in" method="get" accept-charset="utf-8">

@@ -69,6 +69,12 @@ class UserController < ApplicationController
   end
 
   def sign_out
-
+    if params[:sign_out_button]
+      session[:user_id] = nil
+      flash[:alert] = "Successfully signed out."
+      redirect_to root_path
+      return
+    end
   end
+
 end

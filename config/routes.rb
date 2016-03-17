@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'instructor/show'
+
   get 'course/show'
 
   get 'user/sign_up'
