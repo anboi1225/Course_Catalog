@@ -4,7 +4,7 @@ require 'json'
 class Getinfo
   def initialize
     file_course = open("lib/getinfo/course.json")
-    json_course = file.read
+    json_course = file_course.read
     parsed_course =  JSON.parse(json)
     parsed_course.each do |course|
       code = course["code"]
@@ -13,7 +13,7 @@ class Getinfo
     end
 
     file_instructor = open("lib/getinfo/course.json")
-    json_instructor = file.read
+    json_instructor = file_instructor.read
     parsed_instructor =  JSON.parse(json)
     parsed_instructor.each do |instructor|
       first = instructor["first"]
