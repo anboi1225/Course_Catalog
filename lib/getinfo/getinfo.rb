@@ -3,7 +3,7 @@ require 'json'
 
 class Getinfo
   def initialize
-    file = open(Dir.pwd + "/Course_Catalog/lib/getinfo/course.json")
+    file = open(Dir.pwd + "lib/getinfo/course.json")
     json = file.read
     parsed =  JSON.parse(json)
     # (1..12).each do |i|
