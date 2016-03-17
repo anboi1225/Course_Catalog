@@ -12,7 +12,7 @@ class Getinfo
       Course.create(code: code, name: name)
     end
 
-    file_instructor = open("lib/getinfo/course.json")
+    file_instructor = open("lib/getinfo/instructor.json")
     json_instructor = file_instructor.read
     parsed_instructor =  JSON.parse(json_instructor)
     parsed_instructor.each do |instructor|
