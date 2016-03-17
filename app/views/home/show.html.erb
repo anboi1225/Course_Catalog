@@ -13,6 +13,8 @@
 </div>
 </form>
 
+<%= label_tag(:title, "User Profile")%>
+
 <% if User.find_by(id: session[:user_id]) %>
   <% @user =  User.find_by(id: session[:user_id])%>
   <%= label_tag(:username, "Username: ")%>
