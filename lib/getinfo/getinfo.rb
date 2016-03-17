@@ -28,7 +28,7 @@ class Getinfo
     parsed_subject.each do |subject|
       sid = subject["id"]
       name = subject["name"]
-      Course.create(sid: sid, name: name)
+      Subject.create(sid: sid, name: name)
     end
 
   end
