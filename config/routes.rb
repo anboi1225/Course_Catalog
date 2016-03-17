@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'subject/show'
+
   get 'instructor/show'
 
   get 'course/show'

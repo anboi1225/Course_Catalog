@@ -1,5 +1,5 @@
-<h1>Course#show</h1>
-<p>Find me in app/views/course/show.html.erb</p>
+<h1>Subject#show</h1>
+<p>Find me in app/views/subject/show.html.erb</p>
 
 <form name="sign_in_form" action="../user/sign_out" method="get" accept-charset="utf-8">
 <div id="topnavigationbar" class="row">
@@ -13,7 +13,7 @@
 </div>
 </form>
 
-<% Course.all.each do |course| %>
-  <%= course.code %><br>
-  <%= course.name %><br>
+<% Subject.all.each do |subject| %>
+  <%= subject.sid %><br>
+  <%= subject.name %><br>
 <% end %>

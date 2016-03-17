@@ -18,18 +18,18 @@ class Getinfo
     parsed_instructor.each do |instructor|
       first = instructor["first"]
       last = instructor["last"]
-      type = instructor["type"]
-      Instructor.create(first: first, last: last, type: type)
+      iid = instructor["id"]
+      Instructor.create(first: first, last: last, iid: iid)
     end
 
-    # file_course = open("lib/getinfo/course.json")
-    # json_course = file.read
-    # parsed_course =  JSON.parse(json)
-    # parsed_course.each do |course|
-    #   code = course["code"]
-    #   name = course["name"]
-    #   Course.create(code: code, name: name)
-    # end
+    file_subject = open("lib/getinfo/subject.json")
+    json_subject = file_subject.read
+    parsed_subject =  JSON.parse(json_subject)
+    parsed_subject.each do |subject|
+      sid = subject["id"]
+      name = subject["name"]
+      Course.create(sid: sid, name: name)
+    end
 
   end
 end

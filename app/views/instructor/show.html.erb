@@ -5,7 +5,7 @@
 <div id="topnavigationbar" class="row">
   <div>
     <%= link_to "Home", user_sign_up_path %>
-    <%= link_to "Subjects", user_sign_up_path %>
+    <%= link_to "Subjects", subject_show_path %>
     <%= link_to "Courses", course_show_path %>
     <%= link_to "Instructors", instructor_show_path %>
     <input type="submit" value="Sign Out" name="sign_out_button">
@@ -16,5 +16,5 @@
 <% Instructor.all.each do |instructor| %>
   <%= instructor.first %><br>
   <%= instructor.last %><br>
-  <%= instructor.type %><br>
+  <%= instructor.iid %><br>
 <% end %>
