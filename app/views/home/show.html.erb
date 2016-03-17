@@ -13,8 +13,8 @@
 </div>
 </form>
 
-<% if Instructor.find_by(id: session[:user_id]) %>
-  <% @user =  Instructor.find_by(id: session[:user_id]%>
+<% if User.find_by(id: session[:user_id]) %>
+  <% @user =  User.find_by(id: session[:user_id]%>
   <%= label_tag(:username, "Username: ")%>
   <%= @user.username %><br>
   <%= label_tag(:password, "Password: ")%>
