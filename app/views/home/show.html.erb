@@ -1,5 +1,5 @@
-<h1>Instructor#show</h1>
-<p>Find me in app/views/instructor/show.html.erb</p>
+<h1>Home#show</h1>
+<p>Find me in app/views/home/show.html.erb</p>
 
 <form name="sign_in_form" action="../user/sign_out" method="get" accept-charset="utf-8">
 <div id="topnavigationbar" class="row">
@@ -13,8 +13,10 @@
 </div>
 </form>
 
-<% Instructor.all.each do |instructor| %>
-  <%= instructor.first %><br>
-  <%= instructor.last %><br>
-  <%= instructor.iid %><br>
+<% if Instructor.find_by(id: session[:user_id]) %>
+  <% @user =  Instructor.find_by(id: session[:user_id]%>
+  <%= label_tag(:username, "Username: ")%>
+  <%= @user.username %><br>
+  <%= label_tag(:password, "Password: ")%>
+  <%= @user.password %><br>
 <% end %>
