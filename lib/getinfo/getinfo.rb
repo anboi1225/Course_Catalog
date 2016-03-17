@@ -3,7 +3,7 @@ require 'json'
 
 class Getinfo
   def initialize
-    file = open("/home/boyang/Dropbox/cosi166b_ban/Course_Catalog/lib/getinfo/course.json")
+    file = open(Dir.pwd + "/Course_Catalog/lib/getinfo/course.json")
     json = file.read
     parsed =  JSON.parse(json)
     # (1..12).each do |i|
@@ -17,3 +17,11 @@ class Getinfo
     end
   end
 end
+
+# file = open(Dir.pwd + "/Course_Catalog/lib/getinfo/course.json")
+# json = file.read
+# parsed =  JSON.parse(json)
+# (1..12).each do |i|
+#   puts parsed[i]["code"]
+#   puts parsed[i]["name"]
+# end
