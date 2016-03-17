@@ -13,10 +13,10 @@
 </div>
 </form>
 
-<!-- <% if User.find_by(id: session[:user_id]) %>
-  <% @user =  User.find_by(id: session[:user_id]%>
-
+<% if User.find_by(id: session[:user_id]) %>
+  <% @user =  User.find_by(id: session[:user_id])%>
+  <%= label_tag(:username, "Username: ")%>
   <%= @user.username %><br>
-
+  <%= label_tag(:paaword, "Password: ")%>
   <%= @user.password %><br>
-<% end %> -->
+<% end %>
