@@ -14,6 +14,10 @@
 </form>
 
 <% Subject.all.each do |subject| %>
+<div id="sidebar" class="col-xs-6">
   <%= subject.sid %><br>
+</div>
+<div id="sidebar" class="col-xs-6">
   <%= subject.name %><br>
+</div>
 <% end %>

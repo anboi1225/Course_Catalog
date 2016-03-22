@@ -14,7 +14,13 @@
 </form>
 
 <% Instructor.all.each do |instructor| %>
+<div id="sidebar" class="col-xs-4">
   <%= instructor.first %><br>
+</div>
+<div id="sidebar" class="col-xs-4">
   <%= instructor.last %><br>
+</div>
+<div id="sidebar" class="col-xs-4">
   <%= instructor.iid %><br>
+</div>
 <% end %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'search/search'
+
   get 'home/show'
 
   get 'subject/show'
@@ -17,7 +19,10 @@ Rails.application.routes.draw do
 
   root 'user#sign_in'
 
-
+#resource?
+#helper
+#bootstrap: specific rule > general rule
+#pito github
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
