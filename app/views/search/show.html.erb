@@ -1,5 +1,5 @@
-<h1>Instructor#show</h1>
-<p>Find me in app/views/instructor/show.html.erb</p>
+<h1>Search#show</h1>
+<p>Find me in app/views/search/show.html.erb</p>
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -21,8 +21,8 @@
           <li class="active"><a href="../home/show">Home</a></li>
           <li><a href="../subject/show">Subjects</a></li>
           <li><a href="../course/show">Courses</a></li>
-          <li><a href="show">Instructors</a></li>
-          <li><a href="../search/show">Search</a></li>
+          <li><a href="../instructor/show">Instructors</a></li>
+          <li><a href="show">Search</a></li>
         </ul>
       </div><!--/.nav-collapse -->
       </div>
@@ -34,15 +34,3 @@
     </div>
   </div>
 </div>
-
-<% Instructor.all.each do |instructor| %>
-<div id="sidebar" class="col-xs-4">
-  <%= instructor.first %><br>
-</div>
-<div id="sidebar" class="col-xs-4">
-  <%= instructor.last %><br>
-</div>
-<div id="sidebar" class="col-xs-4">
-  <%= instructor.iid %><br>
-</div>
-<% end %>

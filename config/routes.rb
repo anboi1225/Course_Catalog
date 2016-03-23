@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'search/search'
+  get 'search/show'
+
+  get 'search/show'
 
   get 'home/show'
 
