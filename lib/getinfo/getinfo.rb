@@ -9,7 +9,12 @@ class Getinfo
     parsed_course.each do |course|
       code = course["code"]
       name = course["name"]
-      Course.create(code: code, name: name)
+      subjects = course["subjects"]
+      subject_id = []
+      subjects.each do |subject|
+        subject_id.push(subject["id"])
+      end
+      Course.create(code: code, name: name, subjects: subject_id)
     end
 
     file_instructor = open("lib/getinfo/instructor.json")

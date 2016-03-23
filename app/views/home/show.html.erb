@@ -41,6 +41,9 @@
   <% @user =  User.find_by(id: session[:user_id])%>
   <%= label_tag(:username, "Username: ")%>
   <%= @user.username %><br>
-  <%= label_tag(:paaword, "Password: ")%>
-  <%= @user.password %><br>
+<% end %>
+
+<p>Enrolled Courses</p>
+<% @selected_courses.each do |course|%>
+  <p class = "form-control"><%= course.course_code%></p>
 <% end %>

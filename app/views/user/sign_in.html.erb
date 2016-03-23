@@ -43,20 +43,41 @@
 <% if !flash[:signed_in]%>
 <form name="sign_in_form" action="user/sign_in" method="get" accept-charset="utf-8">
     <ul>
-        <li><label for="usermail">Username</label>
-        <input type="string" name="username" placeholder="your username"></li>
-        <li><label for="password">Password</label>
-        <input type="password" name="password" placeholder="password"></li>
-        <li>
-        <input type="submit" value="Sign In" name="sign_in_button"></li>
-        <li>
-        <input type="submit" value="Sign Up" name="sign_up_button"></li>
+        <div class = "row">
+        <div class = "col-xs-2">
+          <label for="usermail" class="form-control">Username</label>
+        </div>
+        <div class = "col-xs-3">
+          <input type="string" name="username" placeholder="your username" class="form-control">
+        </div>
+        </div>
+        <div class = "row">
+        <div class = "col-xs-2">
+          <label for="password" class="form-control">Password</label>
+        </div>
+        <div class = "col-xs-3">
+          <input type="password" name="password" placeholder="password" class="form-control">
+        </div>
+        </div>
+        <div class = "row">
+        <div class = "col-xs-2">
+          <button type="submit" value="Sign In" name="sign_in_button" class="form-control"> Sign In </button>
+        </div>
+        <div class = "col-xs-3">
+          <button type="submit" value="Sign Up" name="sign_up_button" class="form-control"> Sign Up </button>
+        </div>
+        </div>
+
     </ul>
 </form>
 <% end %>
 
 <% if flash[:alert] %>
-<p id = "notice"><%=flash[:alert]%></p>
+<div class = "row">
+  <div class = "col-xs-5">
+    <p class = "form-control"><%=flash[:alert]%></p>
+  </div>
+</div>
 <% end %>
 
 </section>
