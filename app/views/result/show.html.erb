@@ -1,6 +1,5 @@
-<h1>Search#show</h1>
-<p>Find me in app/views/search/show.html.erb</p>
-
+<h1>Result#show</h1>
+<p>Find me in app/views/result/show.html.erb</p>
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -23,7 +22,7 @@
           <li><a href="../subject/show">Subjects</a></li>
           <li><a href="../course/show">Courses</a></li>
           <li><a href="../instructor/show">Instructors</a></li>
-          <li><a href="show">Search</a></li>
+          <li><a href="../search/show">Search</a></li>
         </ul>
       </div>
       </div>
@@ -36,19 +35,8 @@
   </div>
 </div>
 
-
-<form name="search_form" action="../result/show" method="get" accept-charset="utf-8">
-  <div class = "col-xs-2">
-  <select class="form-control">
-    <% Subject.all.each do |subject| %>
-      <option value="subject_option"><%= subject.name %></option>
-    <% end %>
-  </select>
-  </div>
-  <div class = "col-xs-6">
-    <input type="string" class="form-control" name="search_box" placeholder="keyword">
-  </div>
-  <div class = "col-xs-2">
-    <button type="submit" class="btn btn-default" name="search_button" style="vertical-align: middle;">Search</button>
-  </div>
-</form>
+<% if @result%>
+  <% @result.each do |course|%>
+    <%= course.name%>
+  <% end %>
+<% end %>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'search/show'
+
+  get 'result/show'
+
+  get 'search/search'
 
   get 'search/show'
 
