@@ -55,6 +55,18 @@
   </div>
 </form>
 
+<% if @result%>
+<div id="sidebar" class="col-xs-5">
+  <p class = "form-control">Course Name</p>
+</div>
+<div id="sidebar" class="col-xs-5">
+  <p class = "form-control">Subjects</p>
+</div>
+<div id="sidebar" class="col-xs-2">
+  <p class = "form-control">Enroll</p>
+</div>
+<% end %>
+
 <div>
   <% if @result%>
     <% @result.each do |course|%>

@@ -43,7 +43,7 @@
   <%= @user.username %><br>
 <% end %>
 
-<p>Enrolled Courses</p>
+<p class = "form-control">Enrolled Courses</p>
 <% @selected_courses.each do |course|%>
   <p class = "form-control"><%= course.course_code%></p>
 <% end %>
