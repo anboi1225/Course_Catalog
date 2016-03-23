@@ -15,11 +15,11 @@ class SearchController < ApplicationController
       end
 
       if factor1 && factor2
-        @result = Course.where("name LIKE ? AND subjects LIKE ?", "%#{@keyword}%", "%#{@sid}%")
+        @result = Course.where("lower(name) LIKE ? AND subjects LIKE ?", "%#{@keyword}%", "%#{@sid}%")
       elsif factor1
         @result = Course.where("subjects LIKE ?", "%#{@sid}%")
       elsif factor2
-        @result = Course.where("name LIKE ?", "%#{@keyword}%")
+        @result = Course.where("lower(name) LIKE ?", "%#{@keyword}%")
       else
         @result = Course.all
       end
