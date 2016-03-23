@@ -14,16 +14,16 @@ class SearchController < ApplicationController
         end
       end
 
-      if factor1 && factor2
-        @result = Course.where("name LIKE ? AND subjects LIKE ?", "%#{@keyword}%", "%#{@sid}%")
-      elsif factor1
-        @result = Course.where("subjects LIKE ?", "%#{@sid}%")
-      elsif factor2
-        @result = Course.where("name LIKE ?", "%#{@keyword}%")
-      else
-        @result = Course.all
-      end
-
+      # if factor1 && factor2
+      #   @result = Course.where("name LIKE ? AND subjects LIKE ?", "%#{@keyword}%", "%#{@sid}%")
+      # elsif factor1
+      #   @result = Course.where("subjects LIKE ?", "%#{@sid}%")
+      # elsif factor2
+      #   @result = Course.where("name LIKE ?", "%#{@keyword}%")
+      # else
+      #   @result = Course.all
+      # end
+      @result = Course.where("name LIKE ?", "%#{@keyword}%")
     end
   end
 
