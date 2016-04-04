@@ -24,7 +24,10 @@ class SearchController < ApplicationController
         @result = Course.all
       end
 
+      @result = @result.paginate(:page => params[:page], :per_page => 10)
+
     end
+
   end
 
 end

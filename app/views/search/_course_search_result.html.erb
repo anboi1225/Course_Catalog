@@ -1,0 +1,28 @@
+<% if @result%>
+  <div id="sidebar" class="col-xs-5">
+    <p class = "form-control">Course Name</p>
+  </div>
+  <div id="sidebar" class="col-xs-5">
+    <p class = "form-control">Subjects</p>
+  </div>
+  <div id="sidebar" class="col-xs-2">
+    <p class = "form-control">Enroll</p>
+  </div>
+<% end %>
+
+<% if @result%>
+  <div>
+    <%= will_paginate @result %>
+  </div>
+  <%@result.each do |course|%>
+      <div class = "col-xs-5">
+        <%= course.name %>
+      </div>
+      <div class = "col-xs-5">
+        <%= get_subject_name(course.subjects) %>
+      </div>
+      <div class = "col-xs-2">
+        <%= button_to 'Add', {:controller => "home", :action => "show", :course_name => course.name}%>
+      </div>
+  <% end %>
+<% end %>

@@ -36,8 +36,7 @@
   </div>
 </div>
 
-
-<form name="search_form" action="../search/show" method="get" accept-charset="utf-8">
+<%= form_tag("../search/show", method: "get", remote: true) do %>
   <div class = "col-xs-2">
   <select name = "select_tag" class="form-control">
     <option selected="selected">All Subjects</option>
@@ -53,32 +52,10 @@
   <div class = "col-xs-2">
     <button type="submit" class="btn btn-default" name="search_button" style="vertical-align: middle;">Search</button>
   </div>
-</form>
-
-<% if @result%>
-<div id="sidebar" class="col-xs-5">
-  <p class = "form-control">Course Name</p>
-</div>
-<div id="sidebar" class="col-xs-5">
-  <p class = "form-control">Subjects</p>
-</div>
-<div id="sidebar" class="col-xs-2">
-  <p class = "form-control">Enroll</p>
-</div>
 <% end %>
 
-<div>
-  <% if @result%>
-    <% @result.each do |course|%>
-        <div class = "col-xs-5">
-          <%= course.name %>
-        </div>
-        <div class = "col-xs-5">
-          <%= get_subject_name(course.subjects) %>
-        </div>
-        <div class = "col-xs-2">
-          <%= button_to 'Add', {:controller => "home", :action => "show", :course_name => course.name}%>
-        </div>
-    <% end %>
-  <% end %>
+
+
+<div id = "course_search_result">
+    <%= render 'course_search_result' %>
 </div>
