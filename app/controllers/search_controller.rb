@@ -3,7 +3,7 @@ class SearchController < ApplicationController
   def show
     if params[:search_button]
       @subject = params[:select_tag]
-      @keyword = params[:search_box]
+      @keyword = params[:search_box].downcase
       factor1 = true unless @subject == "All Subjects"
       factor2 = true unless @keyword.empty?
 
