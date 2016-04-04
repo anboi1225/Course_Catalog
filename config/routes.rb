@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  post '/search/show_result'
+
+  get '/search/show_result'
+
   post '/home/show'
 
   get 'result/show'

@@ -11,9 +11,7 @@
 <% end %>
 
 <% if @result%>
-  <div>
-    <%= will_paginate @result %>
-  </div>
+
   <%@result.each do |course|%>
       <div class = "col-xs-5">
         <%= course.name %>
